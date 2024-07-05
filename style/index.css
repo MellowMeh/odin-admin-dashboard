@@ -63,7 +63,8 @@ textarea:focus, input:focus {
     background-color: var(--purple);
     display: grid;
     grid-template-rows: 150px minmax(250px, 300px) 1fr;
-    border: 1px solid blue;
+    z-index: 1111;
+    box-shadow: black 5px 0px 10px -6px;
 }
 
 .logo,
@@ -105,6 +106,8 @@ li {
     background-color: var(--white);
     display: grid;
     grid-template-columns: 1fr 35%;
+    z-index: 1111;
+    box-shadow: black 0px 5px 10px -6px;
 }
 
 .searchbar,
