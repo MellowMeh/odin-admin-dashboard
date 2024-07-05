@@ -3,6 +3,11 @@
     --purple: #a855f7;
     --grey: #e4e4e7;
     --white: #f7f7f7;
+    --default-font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
+    font-size: 16px;
+    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+    font-weight: normal;
+    text-transform: capitalize;
 }
 
 
@@ -12,7 +17,6 @@
     padding: 0;
     border: none;
     list-style-type: none;
-    font-size: 16px;
     z-index: 1;
 }
 
@@ -45,7 +49,7 @@ textarea:focus, input:focus {
     width: 100svw;
     height: 100svh;
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: auto minmax(0, 1fr);
     grid-template-areas: 
         "sidebar header"
         "sidebar main";
@@ -55,6 +59,43 @@ textarea:focus, input:focus {
     height: 100svh;
     grid-area: sidebar;
     background-color: var(--purple);
+    display: grid;
+    grid-template-rows: 150px minmax(250px, 300px) 1fr;
+    border: 1px solid blue;
+}
+
+.logo,
+.nav,
+.options {
+    margin: 0 var(--default-font-size);
+}
+
+.primary-nav,
+.secondary-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: calc(var(--default-font-size)*0.55);
+}
+
+.logo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    font-size: calc(var(--default-font-size)*0.75);
+    margin: 20px 5px;
+}
+
+.logo img {
+    height: calc(var(--default-font-size)*2);
+    width: calc(var(--default-font-size)*2);
 }
 
 .header {
