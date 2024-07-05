@@ -1,4 +1,10 @@
 /*Default CSS Rules*/
+:root {
+    --purple: #a855f7;
+    --grey: #e4e4e7;
+    --white: #f7f7f7;
+}
+
 
 * {
     box-sizing: border-box;
@@ -35,13 +41,6 @@ textarea:focus, input:focus {
 }
 
 /*Webpage specific styling*/
-body {
-    background-image: url(../images/art-institute-of-chicago-ygxDHwEn5X0-unsplash.jpg);
-    background-color: rgba(255,255,255,0.6);
-    background-blend-mode: lighten;
-    background-size: 100svw 100svh;
-}
-
 .container {
     width: 100svw;
     height: 100svh;
@@ -55,14 +54,17 @@ body {
 .sidebar {
     height: 100svh;
     grid-area: sidebar;
+    background-color: var(--purple);
 }
 
 .header {
     height: 20svh;
     grid-area: header;
+    background-color: var(--white);
 }
 
 .main {
     height: 80svh;
     grid-area: main;
+    background-color: var(--grey);
 }
