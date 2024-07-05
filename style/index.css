@@ -4,8 +4,9 @@
     --grey: #e4e4e7;
     --white: #f7f7f7;
     --default-font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
+    --default-font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+    font-family: var(--default-font-family);
     font-size: 16px;
-    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
     font-weight: normal;
     text-transform: capitalize;
 }
@@ -50,6 +51,7 @@ textarea:focus, input:focus {
     height: 100svh;
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
     grid-template-areas: 
         "sidebar header"
         "sidebar main";
@@ -99,13 +101,94 @@ li {
 }
 
 .header {
-    height: 20svh;
     grid-area: header;
     background-color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 35%;
+}
+
+.searchbar,
+.account-icons,
+.account-display,
+.header-option-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.account-icons {
+    justify-content: center;
+}
+
+.searchbar {
+    margin: 2vh 0 0 2vw;
+}
+
+.searchbar img {
+    height: calc(var(--default-font-size)*1.5);
+    width: calc(var(--default-font-size)*1.5);
+}
+
+.searchbar input {
+    background-color: var(--grey);
+    border-radius: 15px;
+    height: calc(var(--default-font-size)*1.3);
+    width: 100%;
+    font-family: var(--default-font-family);
+    padding: 0px 10px;
+}
+
+.account-icons {
+    margin: 2vh 2vw 0 0;
+    font-size: calc(var(--default-font-size)*.45);
+    justify-content: flex-end;
+    gap: 6%;
+    padding-right: 5%;
+}
+
+.account-icons img {
+    height: calc(var(--default-font-size)*1.2);
+    width: calc(var(--default-font-size)*1.2);
+}
+
+.account-display {
+    margin: 1.5svh 0 1svh 2svw;
+}
+
+.account-display img {
+    height: calc(var(--default-font-size)*2);
+    width: calc(var(--default-font-size)*2);
+}
+
+.account-display h3{
+    font-size: calc(var(--default-font-size)*.50);
+    text-transform: none;
+}
+
+.account-display h2 {
+    font-size: calc(var(--default-font-size)*.75);
+    text-transform: none;
+}
+
+.header-option-buttons {
+    margin: 1.5svh 2svw 1svh 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 6%;
+}
+
+.header-option-buttons button {
+    font-family: var(--default-font-family);
+    font-size: calc(var(--default-font-size)*.55);
+    text-transform: capitalize;
+    height: calc(var(--default-font-size)*1.6);
+    width: calc(var(--default-font-size)*4.5);
+    background-color: var(--purple);
+    color: var(--white);
+    border-radius: 25px;
 }
 
 .main {
-    height: 80svh;
     grid-area: main;
     background-color: var(--grey);
 }
