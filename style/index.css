@@ -41,3 +41,28 @@ body {
     background-blend-mode: lighten;
     background-size: 100svw 100svh;
 }
+
+.container {
+    width: 100svw;
+    height: 100svh;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main";
+}
+
+.sidebar {
+    height: 100svh;
+    grid-area: sidebar;
+}
+
+.header {
+    height: 20svh;
+    grid-area: header;
+}
+
+.main {
+    height: 80svh;
+    grid-area: main;
+}
