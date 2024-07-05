@@ -62,15 +62,16 @@ textarea:focus, input:focus {
     grid-area: sidebar;
     background-color: var(--purple);
     display: grid;
-    grid-template-rows: 150px minmax(250px, 300px) 1fr;
+    grid-template-rows: 150px minmax(250px, 325px) 1fr;
     z-index: 1111;
     box-shadow: black 5px 0px 10px -6px;
+    padding-right: 20px;
 }
 
 .logo,
 .nav,
 .options {
-    margin: 0 var(--default-font-size);
+    margin: 0 1.25svw;
 }
 
 .primary-nav,
@@ -87,13 +88,20 @@ li {
     font-size: calc(var(--default-font-size)*0.55);
 }
 
+li img {
+    height: 3.75svh;
+    width: 3.75svw;
+    min-height: 25px;
+    min-width: 25px;
+}
+
 .logo {
     display: flex;
     justify-content: start;
     align-items: center;
     gap: 5px;
-    font-size: calc(var(--default-font-size)*0.75);
-    margin: 20px 5px;
+    font-size: calc(var(--default-font-size)*0.55);
+    margin: 15px 5px;
 }
 
 .logo img {
