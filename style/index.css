@@ -255,21 +255,29 @@ li img {
     grid-area: announcements-container;
     display: grid;
     gap: 10px;
-    border: 1px solid purple;
+    background-color: var(--white);
+    border-radius: 15px;
     padding: 10px;
     margin: 10px;
+    border: 1px solid purple;
 }
 
 .announcement {
-    border: 1px solid blue;
+    font-size: 12px;
+    border-bottom: 1px solid black;
+    text-overflow: ellipsis;
 }
 
-.trending-container {
-    grid-area: trending-container;
-    border: 1px solid red;
+.announcements-container :nth-child(3) {
+    border: none;
 }
 
 .trending-heading {
     grid-area: trending-heading;
+    border: 1px solid red;
+}
+
+.trending-container {
+    grid-area: trending-container;
     border: 1px solid red;
 }
