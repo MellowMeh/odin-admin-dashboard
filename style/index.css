@@ -202,4 +202,66 @@ li img {
 .main {
     grid-area: main;
     background-color: var(--grey);
+    display: grid;
+    grid-template-columns: minmax(840px, 1055px) minmax(0px, 1fr);
+    grid-template-areas: 
+    "your-projects-heading announcements-heading"
+    "cards-container announcements-container"
+    "cards-container trending-heading"
+    "cards-container trending-container";
+    padding: 1.5vh 1.5vw 5vh 1.5vw;
+}
+
+.your-projects-heading {
+    grid-area: your-projects-heading;
+    border: 1px solid red;
+}
+
+.announcements-heading {
+    grid-area: announcements-heading;
+    border: 1px solid red;
+}
+
+.your-projects-heading,
+.announcements-heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cards-container {
+    grid-area: cards-container;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 400px));
+    gap: 20px;
+    border: 1px solid red;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 3svh;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: inset 7px 0px 0px 0px rgba(148,212,243,1);
+}
+
+.announcements-container,
+.trending-container,
+.trending-heading {
+    overflow: hidden;
+}
+
+.announcements-container {
+    grid-area: announcements-container;
+    border: 1px solid red;
+}
+
+.trending-container {
+    grid-area: trending-container;
+    border: 1px solid red;
+}
+
+.trending-heading {
+    grid-area: trending-heading;
+    border: 1px solid red;
 }
