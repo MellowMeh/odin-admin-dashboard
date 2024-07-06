@@ -203,30 +203,30 @@ li img {
     grid-area: main;
     background-color: var(--grey);
     display: grid;
-    grid-template-columns: minmax(400px, 1fr) 360px;
+    grid-template-columns: minmax(770px, 1fr) 360px;
     grid-template-areas: 
     "your-projects-heading announcements-heading"
     "cards-container announcements-container"
     "cards-container trending-heading"
     "cards-container trending-container";
-    padding: 1.5vh 1.5vw 5vh 1.5vw;
+    padding: 0vh 1.5vw 5vh 1.5vw;
 }
 
 .your-projects-heading {
     grid-area: your-projects-heading;
-    border: 1px solid red;
 }
 
 .announcements-heading {
     grid-area: announcements-heading;
-    border: 1px solid red;
 }
 
 .your-projects-heading,
-.announcements-heading {
+.announcements-heading,
+.trending-heading {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items:last baseline;
+    padding: 3svh 0px 1.5svh 0px;
 }
 
 .cards-container {
@@ -234,7 +234,6 @@ li img {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 360px));
     gap: 20px;
-    border: 1px solid red;
 }
 
 .card {
@@ -246,20 +245,15 @@ li img {
 }
 
 .announcements-container,
-.trending-container,
-.trending-heading {
-    overflow: hidden;
-}
-
-.announcements-container {
+.trending-container {
     grid-area: announcements-container;
     display: grid;
+    justify-items: flex-start;
     gap: 10px;
     background-color: var(--white);
     border-radius: 15px;
     padding: 10px;
-    margin: 10px;
-    border: 1px solid purple;
+    height: 300px;
 }
 
 .announcement {
@@ -274,10 +268,24 @@ li img {
 
 .trending-heading {
     grid-area: trending-heading;
-    border: 1px solid red;
 }
 
 .trending-container {
     grid-area: trending-container;
-    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-container li {
+    display: flex;
+}
+
+.trending-user {
+    font-size: 12px;
+    padding-top: 15px;
+    margin-bottom: 10px;
+}
+
+.trending-user h2 {
+    text-transform: none;
 }
