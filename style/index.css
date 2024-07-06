@@ -203,7 +203,7 @@ li img {
     grid-area: main;
     background-color: var(--grey);
     display: grid;
-    grid-template-columns: minmax(840px, 1055px) minmax(0px, 1fr);
+    grid-template-columns: minmax(400px, 1fr) 360px;
     grid-template-areas: 
     "your-projects-heading announcements-heading"
     "cards-container announcements-container"
@@ -232,7 +232,7 @@ li img {
 .cards-container {
     grid-area: cards-container;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 400px));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 360px));
     gap: 20px;
     border: 1px solid red;
 }
@@ -253,7 +253,15 @@ li img {
 
 .announcements-container {
     grid-area: announcements-container;
-    border: 1px solid red;
+    display: grid;
+    gap: 10px;
+    border: 1px solid purple;
+    padding: 10px;
+    margin: 10px;
+}
+
+.announcement {
+    border: 1px solid blue;
 }
 
 .trending-container {
